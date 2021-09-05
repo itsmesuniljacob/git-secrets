@@ -1,7 +1,12 @@
 name: 'Git secrets scan'
 description: 'Scan sensitive info in git repo'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
+  test:
+    description: "This is just a test"
+    required: false
+    default: 'Sunil'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.test }}
