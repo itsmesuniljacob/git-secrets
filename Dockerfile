@@ -5,7 +5,7 @@
 FROM alpine/git
 
 RUN git clone https://github.com/awslabs/git-secrets.git
-RUN make install
+RUN cd git-secrets && make install
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
