@@ -1,0 +1,7 @@
+name: 'Git secrets scan'
+description: 'Scan sensitive info in git repo'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
