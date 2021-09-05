@@ -5,7 +5,7 @@
 FROM alpine/git
 RUN apk update && apk add make
 RUN git clone https://github.com/awslabs/git-secrets.git && cd git-secrets
-RUN make install
+# RUN make install
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
