@@ -1,6 +1,6 @@
 
-#!/bin/bash
+#!/bin/sh
 
 # Displaying options
 echo "Running Git secrets GitHub Action with the following options:"
-echo "INPUT_IAC_DIR=${INPUT_IAC_DIR}"
+#echo "INPUT_TEST=${INPUT_TEST}"
