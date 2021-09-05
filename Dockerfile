@@ -6,7 +6,8 @@ FROM alpine/git
 RUN apk update && apk add make
 RUN git clone https://github.com/awslabs/git-secrets.git && \
    cd git-secrets
-# RUN chmod +x entrypoint.sh
 
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x ./entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
