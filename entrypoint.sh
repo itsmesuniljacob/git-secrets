@@ -1,3 +1,3 @@
 #!/bin/sh -l
 echo "Hello World"
-git-secrets
+git secrets --scan
