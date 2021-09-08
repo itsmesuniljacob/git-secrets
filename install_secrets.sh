@@ -4,23 +4,23 @@
 # https://github.com/awslabs/git-secrets/blob/master/README.rst
 
 # requires brew
-if [ ! -x "$(command -v git-secrets)" ]; then
-	echo 'installing git-secrets...'
-	brew install git-secrets
-	echo "done! $(tput setaf 2)✓$(tput sgr 0)"
-fi
+# if [ ! -x "$(command -v git-secrets)" ]; then
+# 	echo 'installing git-secrets...'
+# 	brew install git-secrets
+# 	echo "done! $(tput setaf 2)✓$(tput sgr 0)"
+# fi
 
 # update repo
 echo -n 'updating the repo...'
-git pull origin master
-echo "done! $(tput setaf 2)✓$(tput sgr 0)"
+# git pull origin master
+# echo "done! $(tput setaf 2)✓$(tput sgr 0)"
 
 # add hooks to everything in the future
-echo -n 'setting up global config...'
-git secrets --install ~/.git-templates/git-secrets 2>/dev/null
-git secrets --register-aws --global 2>/dev/null
-git config --global init.templateDir ~/.git-templates/git-secrets 2>/dev/null
-echo "done! $(tput setaf 2)✓$(tput sgr 0)"
+# echo -n 'setting up global config...'
+# git secrets --install ~/.git-templates/git-secrets 2>/dev/null
+# git secrets --register-aws --global 2>/dev/null
+# git config --global init.templateDir ~/.git-templates/git-secrets 2>/dev/null
+# echo "done! $(tput setaf 2)✓$(tput sgr 0)"
 
 # patterns we want to avoid
 echo -n 'adding default pattern matching for passwords...'
